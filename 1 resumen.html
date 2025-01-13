@@ -1,6 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
 
-
-<!DOCTYPE html><html lang="en"><head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>jQuery UI Accordion - Default functionality</title>
@@ -9,62 +10,81 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script>
-    $( function() {
-      $( "#accordion" ).accordion();
-    } );
+        $(function () {
+            $("#accordion").accordion({
+                collapsible: true
+            });
+        });
     </script>
-  </head>
-  <body>
-   
-  <div id="accordion">
-    <h3>1. ¿Qué es la nube?</h3>
-    <div>
-      <p>
-        La nube es un sistema que permite almacenar y procesar datos en servidores remotos accesibles por Internet, en lugar de utilizar dispositivos locales. Esto facilita el acceso a la información desde cualquier lugar con conexión a Internet y elimina la necesidad de depender de hardware específico. Ejemplos comunes de servicios en la nube incluyen Google Drive, Dropbox, y editores online como Google Docs.
-      </p>
-    </div>
-    <h3>2. Seguridad de los datos en la nube</h3>
-    <div>
-      <p>
-        La seguridad de los datos en la nube es fundamental, pero existen riesgos como errores humanos, fallos mecánicos y ataques informáticos. Los errores humanos, como el borrado accidental o la falta de copias de seguridad, son los más comunes. Los fallos mecánicos incluyen problemas con discos duros, cortes de energía o accidentes, mientras que los virus y el cibercrimen exponen constantemente a los dispositivos conectados. Ejemplos reales de estas situaciones son la pérdida de un USB con información de 500,000 personas en Japón y los robos de datos sufridos por empresas como Orange y Netflix, lo que puede generar sanciones, pérdidas económicas y desconfianza de los usuarios. 
-      </p>
-    </div>
-    <h3>3. Cómo funciona la nube</h3>
-    <div>
-      <p>
-        El uso de la nube se diferencia del modelo tradicional:
-      <ul>
-        <li>En el modelo tradicional, los datos y programas se almacenan y procesan en el dispositivo local o en servidores específicos.</li>
-        <li>    En la nube, los datos se procesan y almacenan en servidores remotos accesibles desde cualquier dispositivo conectado a Internet. Esto reduce la dependencia del hardware y permite trabajar desde cualquier lugar.
+</head>
 
-        </li>
-      </ul>
-    </div>
-    <h3>4. Ventajas y diferencias entre modelos</h3>
-    <div>
-      <p>
-        Alojamiento tradicional:
+<body>
 
-        <ul>
-            <li>Depende de dispositivos con gran capacidad de almacenamiento.</li>
-            <li>Los archivos solo son accesibles desde el dispositivo donde fueron guardados.</li>
-            <li> Requiere actualizaciones periódicas manuales de hardware y software.</li>
-          </ul>
-      </p>
-      <p>
-        Alojamiento en la nube:
+    <h1>La nube</h1>
 
-        <ul>
-            <li>No necesita mucho almacenamiento local, ya que los datos están en servidores remotos.</li>
-            <li>Los archivos son accesibles desde cualquier dispositivo con Internet.</li>
-            <li>Las actualizaciones son automáticas y realizadas en los servidores.</li>
-          </ul>
-      </p>
+    <div id="accordion">
+        <h3>1. ¿Qué es la nube?</h3>
+        <div>
+            <p>
+                La nube es un sistema que permite almacenar y procesar datos en servidores remotos accesibles por
+                Internet, en lugar de utilizar dispositivos locales. Esto facilita el acceso a la información desde
+                cualquier lugar con conexión a Internet y elimina la necesidad de depender de hardware específico.
+                Ejemplos comunes de servicios en la nube incluyen Google Drive, Dropbox, y editores online como Google
+                Docs.
+            </p>
+        </div>
+        <h3>2. Seguridad de los datos en la nube</h3>
+        <div>
+            <p>
+                La seguridad de los datos en la nube es fundamental, pero existen riesgos como errores humanos, fallos
+                mecánicos y ataques informáticos. Los errores humanos, como el borrado accidental o la falta de copias
+                de seguridad, son los más comunes. Los fallos mecánicos incluyen problemas con discos duros, cortes de
+                energía o accidentes, mientras que los virus y el cibercrimen exponen constantemente a los dispositivos
+                conectados. Ejemplos reales de estas situaciones son la pérdida de un USB con información de 500,000
+                personas en Japón y los robos de datos sufridos por empresas como Orange y Netflix, lo que puede generar
+                sanciones, pérdidas económicas y desconfianza de los usuarios.
+            </p>
+        </div>
+        <h3>3. Cómo funciona la nube</h3>
+        <div>
+            <p>
+                El uso de la nube se diferencia del modelo tradicional:
+            <ul>
+                <li>En el modelo tradicional, los datos y programas se almacenan y procesan en el dispositivo local o en
+                    servidores específicos.</li>
+                <li> En la nube, los datos se procesan y almacenan en servidores remotos accesibles desde cualquier
+                    dispositivo conectado a Internet. Esto reduce la dependencia del hardware y permite trabajar desde
+                    cualquier lugar.
+
+                </li>
+            </ul>
+        </div>
+        <h3>4. Ventajas y diferencias entre modelos</h3>
+        <div>
+            <p>
+                Alojamiento tradicional:
+
+            <ul>
+                <li>Depende de dispositivos con gran capacidad de almacenamiento.</li>
+                <li>Los archivos solo son accesibles desde el dispositivo donde fueron guardados.</li>
+                <li> Requiere actualizaciones periódicas manuales de hardware y software.</li>
+            </ul>
+            </p>
+            <p>
+                Alojamiento en la nube:
+
+            <ul>
+                <li>No necesita mucho almacenamiento local, ya que los datos están en servidores remotos.</li>
+                <li>Los archivos son accesibles desde cualquier dispositivo con Internet.</li>
+                <li>Las actualizaciones son automáticas y realizadas en los servidores.</li>
+            </ul>
+            </p>
+        </div>
     </div>
-  </div>
-   
-   
-   
-   
-  </body></html>
-  
+
+
+
+
+</body>
+
+</html>
