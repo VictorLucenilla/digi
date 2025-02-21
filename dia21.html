@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Dialog - Animation</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            /* Todos los elementos "div" cuya clase sea "dialog", son elementos que se convertirán en cuadros de diálogo. */
+            $("div.dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                show: {
+                    effect: "blind",
+                    duration: 500
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 500
+                }
+            });
+
+            /* Cada elemento con id "openerX", siendo la "X" un número, será el botón que abrirá el cuadro de diálogo correspondiente. */
+            $("#opener1").on("click", function () {
+                $("#dialog1").dialog("open");
+            });
+
+            $("#opener2").on("click", function () {
+                $("#dialog2").dialog("open");
+            });
+
+            $("#opener3").on("click", function () {
+                $("#dialog3").dialog("open");
+            });
+            $("#opener4").on("click", function () {
+                $("#dialog4").dialog("open");
+            });
+            $("#opener5").on("click", function () {
+                $("#dialog5").dialog("open");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Título de la página -->
+    <h1>SOSTENIBILIDAD</h1>
+
+    <!-- Contenido del primer cuadro de diálogo. Esto no se muestra inicialmente en la página. -->
+    <div id="dialog1" class="dialog" title="Cuadro de diálogo 1">
+        <p>
+            La economía lineal no aprovecha los residuos, mientras que la economía circular busca conservar el valor de los productos a lo largo de su ciclo de vida. <br>
+            La economía circular propone mantener el valor de los recursos y minimizar la generación de residuos.
+        </p>
+        <img src="betis.png" width="100%">
+    </div>
+
+    <!-- Este botón, el primero, hace que se abra el "div" anterior, el del primer contenido. -->
+    <button id="opener1">1. Economía Lineal vs. Economía Circular</button>
+
+    <!-- Contenido del segundo cuadro de diálogo. Esto no se muestra inicialmente en la página. -->
+    <div id="dialog2" class="dialog" title="Cuadro de diálogo 2">
+        <p>Se proponen siete principios para reducir la necesidad de recursos y la emisión de residuos:
+
+            1.Rediseñar productos para que sean más sostenibles. <br>
+            2.Reducir el consumo de productos y servicios.<br>
+            3.Renovar productos existentes. <br>
+            4.Reparar para extender la vida útil de los productos.<br>
+            5.Reutilizar objetos y darles un nuevo uso. <br>
+            6.Recuperar productos desechados para su reutilización en producción.<br>
+            7.Reciclar materiales para crear nuevos productos.
+        </p>
+        <img src="betis.png" width="100%">
+    </div>
+
+    <!-- Este botón, el segundo, hace que se abra el "div" anterior, el del segundo contenido. -->
+    <button id="opener2">2. Principios de la Economía Circular: Las 7 "R"</button>
+
+    <!-- Contenido del tercer cuadro de diálogo. Esto no se muestra inicialmente en la página. -->
+    <div id="dialog3" class="dialog" title="Cuadro de diálogo 3">
+        <p>Aplicación de las 7 "R" en la industria de la moda, como rediseñar pantalones para ser más biodegradables y promover su reparación y reutilización.</p>
+        <img src="betis.png" width="100%">
+    </div>
+
+    <!-- Este botón, el tercer, hace que se abra el "div" anterior, el del tercer contenido. -->
+    <button id="opener3">3. Caso Práctico: Moda Sostenible</button>
+
+    <div id="dialog4" class="dialog" title="Cuadro de diálogo 4">
+        <p>Beneficios para la sociedad: <br>
+
+            Reducción de emisiones de gases de efecto invernadero. <br>
+            Preservación de recursos naturales. <br>
+            Generación de nuevos empleos. <br>
+        
+        Beneficios para las empresas: <br>
+        
+            Eficiencia y ahorro de costos. <br>
+            Sostenibilidad del modelo de negocio.
+        </p>
+        <img src="betis.png" width="100%">
+    </div>
+    <button id="opener4">4. Beneficios de la Economía Verde y Circular</button>
+    <div id="dialog5" class="dialog" title="Cuadro de diálogo 5">
+        <p>
+            Desmaterialización: Reducción de materiales necesarios para la producció <br>
+            Descarbonización: Disminución de dióxido de carbono y otros gases de efecto invernadero. <br>
+            Ambos procesos son clave para avanzar hacia una economía circular más efectiva.
+        </p>
+        <img src="betis.png" width="100%">
+    </div>
+    <button id="opener5">5. Importancia de la Desmaterialización y Descarbonización</button>
+
+</body>
+
+</html>
