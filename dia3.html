@@ -91,6 +91,13 @@
                 
             });
 
+            $("#respuesta5").droppable({
+                drop: function (event, ui) {
+                    $("#respuesta5").comprobarRespuesta(ui.draggable[0].id, "pregunta5")
+                }
+                
+            });
+
 
         });
     </script>
@@ -99,39 +106,48 @@
 <body>
 
     <div id="pregunta1" class="draggable ui-widget-content">
-        <p>Drag me to my target</p>
+        <p>Diferencia entre datos e información</p>
     </div>
 
 
     <div id="pregunta2" class="draggable ui-widget-content">
-        <p>Drag me to my target</p>
+        <p>¿Cuándo se convierte un dato en información?</p>
     </div>
 
 
     <div id="pregunta3" class="draggable ui-widget-content">
-        <p>Drag me to my target</p>
+        <p>¿Por qué necesitamos información?</p>
     </div>
 
 
 
     <div id="pregunta4" class="draggable ui-widget-content">
-        <p>Drag me to my target</p>
+        <p>¿Es suficiente con la información?</p>
+    </div>
+
+    <div id="pregunta5" class="draggable ui-widget-content">
+        <p>Actividades y reflexiones finales</p>
     </div>
 
 
     <div id="respuesta1" class="droppable ui-widget-header">
-        <p>Drop here</p>
+        <p>Los datos son hechos o valores sin procesar, mientras que la información es el resultado de organizar y dar significado a esos datos. Por ejemplo, "5%" es un dato, pero "Las ventas aumentaron un 5% en el último mes" es información.</p>
     </div>
 
     <div id="respuesta2" class="droppable ui-widget-header">
-        <p>Drop here 2</p>
+        <p>Un dato se transforma en información cuando se contextualiza, se categoriza, se calcula o se condensa. Por ejemplo, la nota "3" en un examen es un dato, pero "El estudiante tuvo un promedio de 3 en el trimestre" es informaci</p>
     </div>
     <div id="respuesta3" class="droppable ui-widget-header">
-        <p>Drop here 3</p>
+        <p>Las empresas necesitan información para tomar decisiones estratégicas. Por ejemplo, el departamento de marketing analiza datos de ventas para identificar tendencias y ajustar sus campañas publicitarias.</p>
     </div>
     <div id="respuesta4" class="droppable ui-widget-header">
-        <p>Drop here 4</p>
+        <p>No, la información debe procesarse aún más para convertirse en conocimiento. Comparar datos históricos, identificar causas y efectos, y compartir información con expertos permite tomar decisiones más acertadas.</p>
     </div>
+
+    <div id="respuesta5" class="droppable ui-widget-header">
+        <p>Si un estudiante recibe las calificaciones 3, 3, 2, 4, 1, estos son datos. La información sería "El estudiante tiene un bajo rendimiento en este trimestre". Al analizar las causas, como falta de estudio o dificultades en la materia, se genera conocimiento que permite mejorar su desempeño.</p>
+    </div>
+    
 
     <div id="dialogError" title="Error">
         <p>Has fallado</p>
