@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Droppable - Default functionality</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        .draggable {
+            width: 100px;
+            height: 100px;
+            padding: 0.5em;
+            float: left;
+            margin: 10px 10px 10px 0;
+        }
+
+        .droppable {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+            float: left;
+            margin: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+
+        $(function () {
+
+            $.fn.comprobarRespuesta = function (idDraggableConPregunta, idPreguntaAsociada) {
+                return this.each(function () {
+
+                    if (idDraggableConPregunta == idPreguntaAsociada) {
+                        $(this).addClass("ui-state-highlight");
+
+                        $("#dialogAcierto" ).dialog("open");
+                    }
+                    else {
+                        $("#dialogError" ).dialog("open");
+                    }
+
+                })
+            }
+
+            $( "#dialogAcierto").dialog({
+                autoOpen: false,
+                modal: true
+            });
+
+            $( "#dialogError").dialog({
+                autoOpen: false,
+                modal: true
+            });
+
+
+            $(".draggable").draggable();
+
+            $(".droppable").droppable({
+                out: function (event, ui) {
+                    $(this).removeClass("ui-state-highlight");
+                }
+            });
+
+            $("#respuesta1").droppable({
+                drop: function (event, ui) {
+                    $("#respuesta1").comprobarRespuesta(ui.draggable[0].id, "pregunta1")
+                }
+            });
+
+            $("#respuesta2").droppable({
+                drop: function (event, ui) {
+                    $("#respuesta1").comprobarRespuesta(ui.draggable[0].id, "pregunta2")
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="pregunta1" class="draggable ui-widget-content">
+        <p>Drag me to my target</p>
+    </div>
+
+    <div id="respuesta1" class="droppable ui-widget-header">
+        <p>Drop here</p>
+    </div>
+
+    <div id="respuesta2" class="droppable ui-widget-header">
+        <p>Drop here 2</p>
+    </div>
+
+    <div id="dialogError" title="Error">
+        <p>Has fallado</p>
+    </div>
+
+    <div id="dialogAcierto" title="Acierto">
+        <p>Has acertado</p>
+    </div>
+
+
+
+</body>
+
+</html>
